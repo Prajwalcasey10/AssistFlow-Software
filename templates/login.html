@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="flex-col" style="margin: 30px auto;">
+      <form method="POST" action="/login">
+         {{ form.csrf_token }}
+         {{ form.username.label }} {{ form.username }}<br>
+         {{ form.password.label }} {{ form.password }}<br>
+         {{ form.submit }}
+      </form>
+      <a href="/signup">SignUp here</a>
+   </div>
+{% endblock content %}

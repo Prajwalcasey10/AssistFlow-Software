@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="flex-col">
+        <h1>{{ current_user.username }}</h1>
+        {% for product in current_user.product_list()[1:] %}
+            <li>{{ product.upper() }}</li>
+            <a href="/delete/{{ product }}" class="btn remove">Remove</a><br>
+        {% endfor %}
+    </div>
+{% endblock content %}

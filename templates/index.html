@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+    {% block content %}
+        
+        {% if current_user.is_authenticated %}
+          <h1>Welcome {{ user }}</h1>
+        {% endif %}
+
+        <div id="products" class="flex-row">
+            <div class="child product">
+                <h2>Silver</h2>
+                <span class="savings-highlight">Save 15%</span><br>
+                <ul>
+                    <li>Learning Material</li>
+                    <li>Analytics</li>
+                </ul>
+                <p class="price">$15.39<span style="font-size: 0.5em;">/mo</span></p>
+                <a href="/buy/silver" class="btn">Buy Now</a>
+            </div>
+            <div class="child product highlight">
+                <h2 class="gold-font">Gold</h2>
+                <span class="savings-highlight">Save 25%</span><br>
+                <ul>
+                    <li>Learning Material</li>
+                    <li>Analytics</li>
+                    <li>Unlimited Reports</li>
+                    <li>Real-Time Tracking</li>
+                </ul>
+                <p class="price">$25.39<span style="font-size: 0.5em;">/mo</span></p>
+                <a href="/buy/gold" class="btn">Buy Now</a>
+            </div>
+            <div class="child product">
+                <h2>Platinum</h2>
+                <span class="savings-highlight">Save 21%</span><br>
+                <ul>
+                    <li>Learning Material</li>
+                    <li>Analytics</li>
+                    <li>Unlimited Reports</li>
+                    <li>Real-Time Tracking</li>
+                    <li>Priority Bandwidth</li>
+                </ul>
+                <p class="price">$45.39<span style="font-size: 0.5em;">/mo</span></p>
+                <a href="/buy/platinum" class="btn" >Buy Now</a>
+            </div>
+
+        </div>
+        <div class="flex-row">
+            {% include 'table.html' %}
+            <img src="static/assets/training.png" alt="content infographic" width="300px" height="300px" style="margin: auto;">
+        </div>
+        <div class="flex-row">
+            <div class="child">
+                <span class="material-symbols-outlined lrg-icon">database</span>
+                <p>Ultra Fast Cloud Servers</p>
+            </div>
+            <div class="child">
+                <span class="material-symbols-outlined lrg-icon">support_agent</span>
+                <p>24/7 Technical Support</p>
+            </div>
+            <div class="child">
+                <span class="material-symbols-outlined lrg-icon">lock</span>
+                <p>Your Data is Secure</p>
+                
+            </div>
+        </div>
+    {%endblock content%}
+    

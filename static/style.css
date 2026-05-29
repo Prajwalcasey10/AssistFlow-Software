@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --container-width: 1366px;
+    --primary-colour: #2492eb;
+    --feature-colour: #19F6E4;
+    --white: #f2f2f2;
+    --black: #262626;
+}
+
+body {
+    background-color: var(--white);
+    font-family: sans-serif;
+    text-align: center;
+    color: var(--black);
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0,0,0,0);
+    padding: 1em 0 2em 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin: auto;
+}
+
+footer {
+    position: relative;
+        background: #181d27;
+        padding: 5em 0 3em 0;
+        margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+table {
+    margin: 1em;
+    table-layout: auto;
+}
+
+th, td {
+    border: none;
+    padding: 0.5em;
+}
+
+.flash-message {
+    background-color: #1fbe24;
+    color: white;
+    padding: 7px;
+    margin: 25px 0 0 0;
+}
+
+ul.main-menu {
+    position: absolute;
+    top: 20px;
+    right: 130px;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+}
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.8em;
+    margin: 0 10px;
+    padding: 0;    
+}
+
+.menu li a:hover{
+    text-decoration: underline;
+}
+
+.banner {
+    background: radial-gradient(ellipse at 50% 50%, #2c364a ,#161b23 70%);
+    padding: 5em 0 3em 0;
+    margin: 0;
+    color: var(--white);
+}
+
+.banner > * {
+    margin: 10px;
+}
+
+.banner ul {
+    list-style-position: inside;
+    text-align: left;
+    margin: 15px auto;
+    max-width: 320px;
+    font-size: 0.8em;
+}
+
+.btn {
+    background: transparent;
+    max-width: 300px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    padding: 0.1rem 1.5rem;
+    color: var(--white);
+    border-color: var(--feature-colour);
+    cursor: pointer;
+}
+
+.remove {
+    background: red;
+    font-size: 0.9rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex: 1 1 auto;
+    margin: 0 auto;
+}
+
+.child {
+    padding: 1em 0 1em 0;
+    margin: 5px;
+    flex: 1 1 auto;
+}
+
+.product {
+    width: calc(var(--container-width) / 3);
+    border: 2px solid var(--black);
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    padding: 2em 0 8em 0;
+}
+.product ul {
+    display: inline-block;
+    text-align: left;
+}
+.product .btn {
+    background: var(--primary-colour);
+    position: absolute;
+    margin: 0 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 50px;
+    max-width: 200px;
+}
+.product ul li::marker{
+    content: '\2713';
+    color: green;
+}
+.price {
+    font-size: 2em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 90px;
+}
+.highlight {
+    border: 3px solid rgb(237, 202, 7);
+    /* border-radius: 50px; */
+}
+
+.savings-highlight {
+    display: inline;
+    padding: 0 0.5em;
+    border: 1px solid red;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: red;
+}
+
+.lrg-icon {
+    font-size: 6em;
+    color: var(--primary-colour);
+    width: 300px;
+}
+
+.med-icon {
+    font-size: 1.2em;
+}
+
+.dark {
+    color: var(--black);
+}
+.red-font {
+    color: red;
+}
+.green-font{
+    color: green;
+}
+.gold-font {
+    background: -webkit-linear-gradient(45deg, rgb(154, 130, 0) 20%, gold 60%, rgb(241, 214, 58) 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 964px) {
+    .child {
+        max-width: 400px;
+    }
+    th,td {
+        font-size: 0.8em;
+        padding: 0.2em;
+    }
+    ul.main-menu {
+        position: static;
+    }
+}
